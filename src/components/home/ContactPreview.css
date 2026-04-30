@@ -1,0 +1,78 @@
+.contact-preview-section {
+  background-color: var(--color-bg-base);
+  padding-bottom: var(--spacing-xl);
+}
+
+.cp-wrapper {
+  display: flex;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.cp-content {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cp-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cp-content p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.cp-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cp-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-main);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.icon-link:hover {
+  color: var(--color-primary);
+}
+
+.icon-link.whatsapp {
+  color: #25D366; /* WhatsApp Green */
+}
+
+.cp-image {
+  flex: 1;
+  min-height: 400px;
+}
+
+.cp-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .cp-wrapper {
+    flex-direction: column;
+  }
+  .cp-content {
+    padding: 3rem 2rem;
+  }
+}

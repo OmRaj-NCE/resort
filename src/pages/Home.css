@@ -1,0 +1,44 @@
+/* Home Page Specific Styles if any overall page wrappers are needed */
+.home-page {
+  width: 100%;
+}
+
+/* Common Section Headers for Home Page */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.section-desc {
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}

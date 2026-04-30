@@ -1,0 +1,148 @@
+.packages-preview-section {
+  background-image: url('https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+}
+
+.packages-preview-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+
+.packages-banner {
+  position: relative;
+  z-index: 10;
+  border-radius: var(--radius-lg);
+  padding: 4rem;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.banner-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.banner-content p {
+  color: #CCCCCC;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.featured-pack {
+  background: rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border-left: 2px solid var(--color-primary);
+}
+
+.featured-pack h3 {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pack-price {
+  font-family: var(--font-sans);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.featured-pack ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.featured-pack li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #DDDDDD;
+  font-size: 0.95rem;
+}
+
+.banner-images {
+  position: relative;
+  height: 450px;
+}
+
+.pack-img {
+  position: absolute;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 4px solid rgba(255,255,255,0.1);
+  transition: var(--transition-smooth);
+}
+
+.pack-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bottom-img {
+  width: 60%;
+  height: 60%;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.middle-img {
+  width: 65%;
+  height: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.top-img {
+  width: 70%;
+  height: 70%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.banner-images:hover .top-img { transform: translate(-20px, -20px); }
+.banner-images:hover .bottom-img { transform: translate(20px, 20px); }
+
+@media (max-width: 1024px) {
+  .banner-grid {
+    grid-template-columns: 1fr;
+  }
+  .packages-banner {
+    padding: 3rem 2rem;
+  }
+  .banner-images {
+    display: none; /* Hide complex image stack on smaller screens */
+  }
+}
